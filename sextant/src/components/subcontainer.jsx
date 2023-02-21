@@ -1,9 +1,10 @@
-import React from 'react'
-
-function Subcontainer() {
-  return (
-    <div className='Subcontainer'>Subcontainer</div>
-  )
-}
-
-export default Subcontainer
+import React, { useEffect, useState } from 'react'
+import Container from './Container.jsx'
+import IpFinder from './IpFinder.jsx'
+function Subcontainer(prop) {
+    return (
+        <div className='Subcontainer'>{prop.name}
+        <div>IP :{<IpFinder url={prop.url}/>}</div></div>
+      )
+    }   
+    export default Subcontainer
